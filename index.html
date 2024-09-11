@@ -15,15 +15,17 @@
     <main>
         <section class = "selection-content">
 
-            <button href="#" class="selection-button bisque-color">Segitiga</button>
-            <button href="#" class="selection-button aqua-color">Jajargenjang</button>
+            <button href="#" type="button" onclick="ccsegitiga()" class="selection-button bisque-color" id="segitiga-btn">Segitiga</button>
+            <button href="#" type="button" onclick="ccjajargenjang()" class="selection-button aqua-color" id="jajar-genjang-btn">Jajargenjang</button>
         
         </section>
 
     <section class="main-content">
+
+        <!-- Sisi Kiri -->
         <aside>
             <header>
-                <h1 cass="luas-segitiga-header">Luas Segitiga</h1>
+                <h1 class="luas-segitiga-header">Luas Segitiga</h1>
             </header>
 
             <article class="luas-segitiga-content">
@@ -41,29 +43,30 @@
                 
                 <div class="input-wrapper">
                     <label for="panjang-alas">Panjang Alas:</label>
-                    <input id="panjang-alas" type="number"/>
+                    <input id="panjang-alas" type="number" required/>
                 </div>
 
                 <div class="input-wrapper">
                     <label for="tinggi">Tinggi:</label>
-                    <input id="tinggi" type="number"/>
+                    <input id="tinggi" type="number" required/>
                 </div>
 
                 <p id="result">Hasil Penghitungan:</p>
 
-                <button>Hitung</button>
+                <button onclick="validateLuasSegitiga()" type="button">Hitung</button>
             </form>
 
         </aside>
 
+        <!-- Sisi Kanan -->
         <aside>
             <header>
-                <h1 cass="luas-segitiga-header">Luas Segitiga</h1>
+                <h1 class="keliling-segitiga-header">Keliling Segitiga</h1>
             </header>
 
-            <article class="luas-segitiga-content">
-                <div class="luas-segitiga-img"></div>
-                <p>Rumus Luas Segitiga</p>
+            <article class="keliling-segitiga-content">
+                <div class="keliling-segitiga-img"></div>
+                <p>Rumus Keliling Segitiga</p>
 
             </article>
 
@@ -71,17 +74,22 @@
 
             <form>
                 <header>
-                    <h1 class="luas-segitiga-form-header">Hitung Luas Segitiga</h1>
+                    <h1 class="keliling-segitiga-form-header">Hitung Keliling Segitiga</h1>
                 </header>
                 
                 <div class="input-wrapper">
-                    <label for="panjang-alas">Panjang Alas:</label>
-                    <input id="panjang-alas" type="number"/>
+                    <label for="sisi-A">Sisi A:</label>
+                    <input id="sisi-A" type="number" required/>
                 </div>
 
                 <div class="input-wrapper">
-                    <label for="tinggi">Tinggi:</label>
-                    <input id="tinggi" type="number"/>
+                    <label for="sisi-B">Sisi B:</label>
+                    <input id="sisi-B" type="number" required/>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="sisi-C">Sisi C:</label>
+                    <input id="sisi-C" type="number" required/>
                 </div>
 
                 <p id="result">Hasil Penghitungan:</p>
@@ -96,5 +104,7 @@
     <footer>
 
     </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
